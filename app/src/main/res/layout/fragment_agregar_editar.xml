@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--FRAGMENT DE FAgregarEditar.java-->
+
+<!--FrameLayout que contiene un ScrollView y un FloatingActionButton.
+    El ScrollView a su vez contiene un LinearLayout vertical y 6 TextInputLayout-->
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ScrollView>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--6 Elementos para ingresar texto con sus EditText internos para los hints-->
+        <android.support.design.widget.TextInputLayout android:id="@+id/txt_il_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Los atributos inputType e imeOptions determinan qué tipo de teclado desplegar.-->
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_name_required"
+                android:inputType="textPersonName|textCapWords"
+                android:imeOptions="actionNext"/> <!--Despliega botón "next" en teclado-->
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout android:id="@+id/txt_il_telefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_phone"
+                android:inputType="phone"
+                android:imeOptions="actionNext"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout android:id="@+id/txt_il_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_email"
+                android:inputType="textEmailAddress"
+                android:imeOptions="actionNext"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout android:id="@+id/txt_il_calle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_street"
+                android:inputType="textPostalAddress|textCapWords"
+                android:imeOptions="actionNext"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout android:id="@+id/txt_il_comuna"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_comuna"
+                android:inputType="textPostalAddress|textCapWords"
+                android:imeOptions="actionNext"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout android:id="@+id/txt_il_ciudad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_city"
+                android:inputType="textPostalAddress|textCapWords"
+                android:imeOptions="actionDone"/> <!--Despliega botón "listo" en teclado-->
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

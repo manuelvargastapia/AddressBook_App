@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--VERSIÓN PARA TABLETS EN MODO LANDSCAPE-->
+
+<!--LinearLayout conteniendo un Fragment de FContacto.java, más un
+    FrameLayout vacío.
+
+    El LinearLayout utiliza un divider, que es un drawable, para separar
+    ítems. En este caso, se trata de "?android:listDivider", donde ?android:
+    indica que el Layout deberá utilizar el recurso predefinido en este tema.
+
+    showDividers: middle indica que los recursos divider deben aparecer solo
+    entre los ítems del Layout.
+
+    weightSum ayuda a situar el espacio horizontal entre el Fragment de FContacto
+    y el FrameLayout. En este caso, el primero usa un tercio y el segundo dos
+    tercios del espacio.-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="@dimen/margen_divider"
+    android:baselineAligned="false"
+    android:divider="?android:listDivider"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/margen_vertical"
+    android:paddingLeft="@dimen/margen_horizontal"
+    android:paddingRight="@dimen/margen_horizontal"
+    android:paddingTop="@dimen/margen_vertical"
+    android:showDividers="middle"
+    android:weightSum="3"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <fragment android:id="@+id/fragment_contactos"
+        android:name="cl.manuel.addressbook_app.FContacto"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/margen_divider"
+        android:layout_weight="1"
+        tools:layout="fragment_contactos" />
+
+
+    <FrameLayout android:id="@+id/contenedor_panel_derecho"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/margen_divider"
+        android:layout_weight="2">
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--FRAGMENT DE FDetalle.java-->
+
+<!--ScrollView que contiene un GridLayout vertical con dos columnas de TextViews.
+    ScrollView permite mostrar contenido scrolleable, ya que no cabe en la pantalla.
+
+    El valor layout_height del GridLayout le permite a ScrollView la altura actual
+    del mismo y decidir si proveer de scroll o no.-->
+
+<ScrollView android:id="@+id/scrollView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <GridLayout android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:useDefaultMargins="true">
+
+        <!--Conjunto de etiquetas de texto con sus atributos.
+            Los estilos provienen de styles.xml-->
+
+        <!--Columna izq-->
+        <TextView android:id="@+id/tv_label_nombre"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:text="@string/label_name"
+            style="@style/style_etiqueta_contacto"/>
+        <TextView android:id="@+id/tv_label_telefono"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:text="@string/label_phone"
+            style="@style/style_etiqueta_contacto"/>
+        <TextView android:id="@+id/tv_label_email"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:text="@string/label_email"
+            style="@style/style_etiqueta_contacto"/>
+        <TextView android:id="@+id/tv_label_calle"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:text="@string/label_street"
+            style="@style/style_etiqueta_contacto"/>
+        <TextView android:id="@+id/tv_label_comuna"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:text="@string/label_comuna"
+            style="@style/style_etiqueta_contacto"/>
+        <TextView android:id="@+id/tv_label_ciudad"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:text="@string/label_city"
+            style="@style/style_etiqueta_contacto"/>
+
+        <!--Columna der-->
+        <TextView android:id="@+id/tv_nombre"
+            android:layout_row="0"
+            android:layout_column="1"
+            style="@style/style_contacto"
+            />
+        <TextView android:id="@+id/tv_telefono"
+            android:layout_row="1"
+            android:layout_column="1"
+            style="@style/style_contacto"
+            />
+        <TextView android:id="@+id/tv_email"
+            android:layout_row="2"
+            android:layout_column="1"
+            style="@style/style_contacto"
+            />
+        <TextView android:id="@+id/tv_calle"
+            android:layout_row="3"
+            android:layout_column="1"
+            style="@style/style_contacto"
+            />
+        <TextView android:id="@+id/tv_comuna"
+            android:layout_row="4"
+            android:layout_column="1"
+            style="@style/style_contacto"
+            />
+        <TextView android:id="@+id/tv_ciudad"
+            android:layout_row="5"
+            android:layout_column="1"
+            style="@style/style_contacto"
+            />
+
+    </GridLayout>
+
+</ScrollView>

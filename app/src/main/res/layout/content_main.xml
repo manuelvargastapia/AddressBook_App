@@ -1,9 +1,30 @@
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+<!--VERSIÓN PARA CELULARES-->
+
+<!--Despliega la GUI de FContacto.java (ex MainActivityFragment.java).
+    Archivo contenido en MainActivity.
+
+    MainActivity despliega dinámicamente los Fragment en este FrameLayout.
+    Este layout rellena el espacio disponible con un padding de 16dp en todos lados.
+
+    La propiedad layout_behavior es usada por el CoordinatorLayout de
+    activity_main.xml para gestionar las interacciones entre sus vistas.
+    Esto asegura que los contenidos del FrameLayout "scrolleen por debajo"
+    de la Toolbar definida en activity_main.xml.-->
+
+<FrameLayout android:id="@+id/fragmentContainer"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/fragment"
-    android:name="cl.manuel.addressbook_app.MainActivityFragment"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
+    android:paddingBottom="@dimen/margen_vertical"
+    android:paddingLeft="@dimen/margen_horizontal"
+    android:paddingRight="@dimen/margen_horizontal"
+    android:paddingTop="@dimen/margen_vertical"
+
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:layout="@layout/fragment_main" />
+
+    tools:context=".MainActivity" />
