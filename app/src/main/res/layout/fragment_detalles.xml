@@ -21,6 +21,7 @@
         <!--Conjunto de etiquetas de texto con sus atributos.
             Los estilos provienen de styles.xml-->
 
+
         <!--Columna izq-->
         <TextView android:id="@+id/tv_label_nombre"
             android:layout_row="0"
@@ -52,6 +53,7 @@
             android:layout_column="0"
             android:text="@string/label_city"
             style="@style/style_etiqueta_contacto"/>
+
 
         <!--Columna der-->
         <TextView android:id="@+id/tv_nombre"
