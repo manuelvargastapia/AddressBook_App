@@ -6,9 +6,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * A placeholder fragment containing a simple view.
- */
+/*DESCRIPCIÓN DE LA CLASE:
+* Esta clase gestiona el RecyclerView con la lista de contactos, más el FloatingAcionButton
+* que agrega contactos.
+* Es el Fragment que MainActivity despliega por primera vez en celular y por siempre en tablet.
+* Tiene una interfaz anidada que define métodos callback, implementados por MainActivity, para
+* reaccionar (este Fragment) a los eventos asociados a los contactos.*/
+
 public class FContacto extends Fragment {
 
     public FContacto() {

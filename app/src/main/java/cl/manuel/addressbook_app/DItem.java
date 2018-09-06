@@ -6,7 +6,8 @@ import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-/*Clase que define los dividers entre los ítems de RecyclerView.
+/*DESCRIPCIÓN DE LA CLASE:
+ * Clase que define los dividers entre los ítems de RecyclerView de FContcato.
  * Ver sample de implementación: bit.ly/DividerItemDecoration*/
 
 public class DItem extends RecyclerView.ItemDecoration{
