@@ -7,5 +7,17 @@ package cl.manuel.addressbook_app;
 * Su interfaz anidado define los métodos callback implementados por MainActivity para responder
 * adecuadamente a los eventos.*/
 
-public class FDetalle {
+
+import android.net.Uri;
+import android.support.v4.app.Fragment;
+
+public class FDetalle extends Fragment {
+
+
+    //INTERFAZ INTERNA INVOCADA POR MAINACTIVITY
+    public interface FDetalleListener{
+
+        void contactoEliminado();
+        void editarContacto(Uri uriContacto);
+    }
 }

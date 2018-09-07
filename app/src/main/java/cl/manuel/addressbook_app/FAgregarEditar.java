@@ -5,5 +5,16 @@ package cl.manuel.addressbook_app;
 * Su interfaz anidada define métodos callback implementados por MainAcitivty, de modo que este
 * Fragment pueda responder a los eventos (guardar nuevo contacto o actualizad).*/
 
-public class FAgregarEditar {
+
+import android.net.Uri;
+import android.support.v4.app.Fragment;
+
+public class FAgregarEditar extends Fragment {
+
+
+    //INTERFAZ INTERNA INVOCADA POR MAINACTIVITY
+    public interface FAgregarEditarListener{
+
+        void agregarEditarCompletado(Uri uriContacto);
+    }
 }
